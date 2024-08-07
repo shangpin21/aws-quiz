@@ -1,0 +1,122 @@
+* {
+    margin : 0;
+    padding : 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #301934;
+}
+
+.app{
+    background: #edf5f1;
+    width:90%;
+    max-width: 800px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.app h1{
+    font-weight: 25px;
+    color: #301934;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+
+.quiz{
+    padding: 20px 0;
+}
+
+.quiz h2{
+    font-size: 18px;
+    color: #301934;
+    font-weight: 600;
+}
+
+.btn{
+    background: #edf5f1;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn:hover:not([disabled]){
+    background: #222;
+    color: #fff;
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+.btn:disabled.correct {
+    background: #9aeabc;
+    opacity: 1; /* Remove grayed-out effect */
+}
+.btn:disabled.incorrect {
+    background:#ff9393; /* Red */
+    opacity: 1; /* Remove grayed-out effect */
+}
+
+#next-btn{
+    background: #301934;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display:none;
+}
+#start-quiz-btn{
+    background: #301934;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display:block;
+}
+
+.correct{
+    background: #9aeabc;
+}
+.incorrect{
+    background:#ff9393;
+}
+.pass {
+    color: green;
+    font-weight: bold;
+}
+.fail {
+    color: red;
+    font-weight: bold;
+}
+.intro {
+    background: #edf5f1;
+    width:90%;
+    max-width: 800px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.intro h4{
+    font-family: "Times New Roman", serif;
+}
+
+.nav-link:hover {
+    color: blue !important;
+  }
