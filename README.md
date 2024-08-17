@@ -10,5 +10,5 @@ Comment below if any answers are inaccurate or need corrections.
 ![Logo](./img/awsLogo.png)
 
 
-If you find this content helpful to you please share it with others. You can also show your support by buying me a coffee using the link below.
+If you find this content helpful to you please share it with others. You can also show your support by buying me a coffee using the link below.<br><br>
 <a href="https://www.buymeacoffee.com/DavidLim" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
