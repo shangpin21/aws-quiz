@@ -4,11 +4,19 @@ document.addEventListener('DOMContentLoaded', () => {
     let questions = [];
     let questionHistory = [];
     let selectedAnswers = [];
+    let questionTextArr = [];
     let twoanswers = false;
     let threeanswers = false;
     let totalScore = 0;
     let currentScore = 0;
+
+    let currentSelectedAnswers = [];
+    let currentSelectedAnswersAll = [];
     
+    let currentCorrectAnsArr = [];
+    let currentCorrectAnsArrAll = [];
+
+    let correct_or_incorect = [];
 
     fetch('questions.json')
         .then(response => response.json())
@@ -19,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     break;
                 case "Module 3":
                     questions = data.quizzes[2].questions; // Select questions for Module 3
-                    console.log(questions);
                     break;
                 case "Module 4":
                     questions = data.quizzes[3].questions; // Select questions for Module 4
@@ -58,8 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .catch(error => console.error('Error loading quiz data:', error));
 
     document.getElementById('next-btn').addEventListener('click', loadNextQuestion);
-    console.log('Question History:', questionHistory);
-
+    
     function loadNextQuestion() {
         if (currentQuestionIndex < questions.length - 1) {
             let randomIndex;
@@ -69,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             currentQuestionIndex++;
             questionHistory.push(randomIndex);
-            console.log('Question History:', questionHistory); // Print the question history
             const question = questions[randomIndex];
             displayQuestion(question);
         }else{
@@ -82,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentScore = 0;
         document.getElementById('question_no').innerText = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
         document.getElementById('question').innerText = question.question_text;
+        questionTextArr.push(question.question_text);
 
         question.options.forEach((option, index) => {
             const button = document.createElement("button");
@@ -93,19 +99,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     twoanswers = true;
                     button.dataset.correct = true;
                     button.dataset.selectTwo = true;
+                    currentCorrectAnsArr.push(option.option_text);
                 }
                 if (question.correct_answer_id.includes(option.option_id) && question.correct_answer_id.length == 3) {
                     threeanswers = true;
                     button.dataset.correct = true;
                     button.dataset.selectThree = true;
+                    currentCorrectAnsArr.push(option.option_text);
                 }
             } else {
                 if (question.correct_answer_id == option.option_id) {
                     button.dataset.correct = true;
+                    currentCorrectAnsArr.push(option.option_text);
                 }
             }
             button.addEventListener("click", selectAnswer);
-            
             
         });
 
@@ -126,17 +134,26 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('next-btn').style.display = "block";
         document.getElementById('next-btn').addEventListener('click', restartQuiz);
         
+
+        // Display the "View Details" button
+        document.getElementById('view-details-btn').style.display = "block";
+        document.getElementById('view-details-btn').addEventListener('click', showDetails);
     }
     function restartQuiz() {
         // Reset variables
         currentQuestionIndex = -1;
         questionHistory = [];
+        currentSelectedAnswersAll = [];
+        currentCorrectAnsArrAll = [];
+        correct_or_incorect = [];
         totalScore = 0;
 
         // Remove event listener to prevent multiple bindings
         document.getElementById('next-btn').removeEventListener('click', restartQuiz);
         document.getElementById('next-btn').innerText = "Next";
         document.getElementById('result').innerText = "";
+        document.getElementById('view-details-btn').style.display = "none";
+        document.getElementById('details').style.display = 'none';
         
         // Load the first question
         loadNextQuestion();
@@ -151,23 +168,25 @@ document.addEventListener('DOMContentLoaded', () => {
         twoanswers = false;
         threeanswers = false;
         selectedAnswers = [];
+        currentSelectedAnswers = [];
+        currentCorrectAnsArr = [];
     }
 
     function selectAnswer(e){
-        console.log("Total Score: " + totalScore);
         const selectedBtn = e.target;
         const isCorrect = selectedBtn.dataset.correct;
         if(isCorrect){
             selectedBtn.classList.add("correct");
             selectedAnswers.push(e);
+            currentSelectedAnswers.push(selectedBtn.innerHTML);
             currentScore++;
         }else{
             selectedBtn.classList.add("incorrect");
             selectedAnswers.push(e);
+            currentSelectedAnswers.push(selectedBtn.innerHTML);
         }
     
     Array.from(answerButtons.children).forEach(button => {
-        console.log(threeanswers);
 
         if(selectedAnswers.length == 3 && threeanswers == true && twoanswers == false){
             if(button.dataset.correct === "true" && button.dataset.selectThree === "true"){
@@ -202,32 +221,88 @@ document.addEventListener('DOMContentLoaded', () => {
                
     });
 
-        console.log("Current Score = " + currentScore);
-        console.log("Selected answers length: " + selectedAnswers.length);
         if( twoanswers == true && selectedAnswers.length == 2){
             if(currentScore < 2){
                 currentScore = 0;
+                correct_or_incorect.push("Wrong");
             }else{
                 currentScore = 1;
+                correct_or_incorect.push("Correct");
             }
             totalScore += currentScore;
+            currentSelectedAnswersAll.push(currentSelectedAnswers);
+            currentCorrectAnsArrAll.push(currentCorrectAnsArr);
             document.getElementById('next-btn').style.display = "block";
         }
 
         if( threeanswers == true && selectedAnswers.length == 3){
             if(currentScore < 3){
                 currentScore = 0;
+                correct_or_incorect.push("Wrong");
             }else{
                 currentScore = 1;
+                correct_or_incorect.push("Correct");
             }
             totalScore += currentScore;
+            currentSelectedAnswersAll.push(currentSelectedAnswers);
+            currentCorrectAnsArrAll.push(currentCorrectAnsArr);
             document.getElementById('next-btn').style.display = "block";
         }
 
         if(selectedAnswers.length > 0 && twoanswers == false){
+            if(currentScore == 0){
+                correct_or_incorect.push("Wrong");
+            }else{
+                correct_or_incorect.push("Correct");
+            }
             totalScore += currentScore;
+            currentSelectedAnswersAll.push(currentSelectedAnswers);
+            currentCorrectAnsArrAll.push(currentCorrectAnsArr);
             document.getElementById('next-btn').style.display = "block";
         }
         
     }
+
+    function showDetails() {
+        const detailsTableBody = document.querySelector('#details-table tbody');
+        detailsTableBody.innerHTML = ''; // Clear any existing rows
+    
+        questionTextArr.forEach((question, index) => {
+            const listItem = document.createElement('tr');
+            
+            // Question text
+            const questionCell = document.createElement('td');
+            questionCell.innerText = (index+1) + ". " + question;
+            listItem.appendChild(questionCell);
+    
+            // User's selected answer
+            const userAnswerCell = document.createElement('td');
+            const userAnswerArr = currentSelectedAnswersAll[index];
+            const userAnswer = userAnswerArr.join('<br> <br>');
+            userAnswerCell.innerHTML = userAnswer;
+            listItem.appendChild(userAnswerCell);
+    
+            // Correct answer
+            const correctAnswerCell = document.createElement('td');
+            const correctAnswerArr = currentCorrectAnsArrAll[index];
+            correctAnswerCell.innerHTML = correctAnswerArr.join('<br> <br>');
+            listItem.appendChild(correctAnswerCell);
+
+            // Status (Correct/Wrong)
+            const statusCell = document.createElement('td');
+            const statusArr = correct_or_incorect[index];
+            if(statusArr == "Wrong"){
+                listItem.classList.add("table-danger");  
+            }
+            statusCell.innerHTML = statusArr;
+            listItem.appendChild(statusCell);
+
+            // Append the row to the table body
+            detailsTableBody.appendChild(listItem);
+        });
+    
+        // Show the details section
+        document.getElementById('details').style.display = 'block';
+    }
+
 });
