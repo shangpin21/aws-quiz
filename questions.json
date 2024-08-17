@@ -1687,7 +1687,7 @@
                             {"option_id": 3, "option_text": "A VPN connection uses the internet for transport."},
                             {"option_id": 4, "option_text": "A VPN connection requires proprietary hardware."}
                         ],
-                        "correct_answer_ids": [2, 3]
+                        "correct_answer_id": [2, 3]
                     },
                     {
                         "question_id": 16,
@@ -1709,7 +1709,7 @@
                             {"option_id": 3, "option_text": "IAM"},
                             {"option_id": 4, "option_text": "CloudFront"}
                         ],
-                        "correct_answer_ids": [3, 4]
+                        "correct_answer_id": [3, 4]
                     },
                     {
                         "question_id": 18,
@@ -1753,7 +1753,7 @@
                             {"option_id": 3, "option_text": "Route 53"},
                             {"option_id": 4, "option_text": "EC2"}
                         ],
-                        "correct_answer_ids": [2, 3]
+                        "correct_answer_id": [2, 3]
                     },
                     {
                         "question_id": 22,
@@ -2414,7 +2414,7 @@
                             {"option_id": 3, "option_text": "S3 has the most durable storage."},
                             {"option_id": 4, "option_text": "S3 has the fastest retrieval times."}
                         ],
-                        "correct_answer_ids": [1, 4]
+                        "correct_answer_id": [1, 4]
                     },
                     {
                         "question_id": 4,
@@ -2447,7 +2447,7 @@
                             {"option_id": 3, "option_text": "Cached gateway"},
                             {"option_id": 4, "option_text": "Tape gateway"}
                         ],
-                        "correct_answer_ids": [2, 4]
+                        "correct_answer_id": [2, 4]
                     },
                     {
                         "question_id": 7,
@@ -2480,7 +2480,7 @@
                             {"option_id": 3, "option_text": "EC2 load balancers"},
                             {"option_id": 4, "option_text": "RDS"}
                         ],
-                        "correct_answer_ids": [2, 4]
+                        "correct_answer_id": [2, 4]
                     },
                     {
                         "question_id": 10,
@@ -2536,7 +2536,7 @@
                             {"option_id": 4, "option_text": "Stored volumes can be up to 32 TB in size."},
                             {"option_id": 5, "option_text": "Stored volumes asynchronously back up data to S3 as EBS snapshots."}
                         ],
-                        "correct_answer_ids": [1, 2, 5]
+                        "correct_answer_id": [1, 2, 5]
                     },
                     {
                         "question_id": 15,
@@ -2558,7 +2558,7 @@
                             {"option_id": 3, "option_text": "Viewing an S3 bucket from the AWS Management Console"},
                             {"option_id": 4, "option_text": "Listing IAM users from the AWS Command Line Interface (CLI)"}
                         ],
-                        "correct_answer_ids": [3, 4]
+                        "correct_answer_id": [3, 4]
                     },
                     {
                         "question_id": 17,
@@ -2592,7 +2592,7 @@
                             {"option_id": 3, "option_text": "It enforces encryption at rest."},
                             {"option_id": 4, "option_text": "It has tamper-resistant network ports."}
                         ],
-                        "correct_answer_ids": [1, 3]
+                        "correct_answer_id": [1, 3]
                     },
                     {
                         "question_id": 20,
@@ -2636,7 +2636,7 @@
                             {"option_id": 3, "option_text": "Security groups"},
                             {"option_id": 4, "option_text": "Access control lists"}
                         ],
-                        "correct_answer_ids": [2, 4]
+                        "correct_answer_id": [2, 4]
                     },
                     {
                         "question_id": 24,
@@ -2647,7 +2647,7 @@
                             {"option_id": 3, "option_text": "EBS stores objects."},
                             {"option_id": 4, "option_text": "S3 stores objects."}
                         ],
-                        "correct_answer_ids": [2, 4]
+                        "correct_answer_id": [2, 4]
                     },
                     {
                         "question_id": 25,
@@ -2670,7 +2670,7 @@
                             {"option_id": 4, "option_text": "Deleting old objects"},
                             {"option_id": 5, "option_text": "Moving objects to Glacier"}
                         ],
-                        "correct_answer_ids": [1, 4, 5]
+                        "correct_answer_id": [1, 4, 5]
                     },
                     {
                         "question_id": 27,
@@ -2693,7 +2693,7 @@
                             {"option_id": 4, "option_text": "ONEZONE_IA"},
                             {"option_id": 5, "option_text": "STANDARD_IA"}
                         ],
-                        "correct_answer_ids": [3, 5]
+                        "correct_answer_id": [3, 5]
                     },
                     {
                         "question_id": 29,
@@ -2737,7 +2737,7 @@
                             {"option_id": 3, "option_text": "All objects are readable by all AWS users by default."},
                             {"option_id": 4, "option_text": "By default, S3 removes ACLs that allow public read access to objects."}
                         ],
-                        "correct_answer_ids": [2, 4]
+                        "correct_answer_id": [2, 4]
                     },
                     {
                         "question_id": 33,
@@ -2759,7 +2759,7 @@
                             {"option_id": 3, "option_text": "The AWS CLI"},
                             {"option_id": 4, "option_text": "AWS Storage Gateway—volume gateway"}
                         ],
-                        "correct_answer_ids": [1, 2, 4]
+                        "correct_answer_id": [1, 2, 4]
                     },
                     {
                         "question_id": 35,
@@ -2787,7 +2787,7 @@
                             {"option_id": 3, "option_text": "Enable DynamoDB Auto Scaling"},
                             {"option_id": 4, "option_text": "Decrease write capacity units"}
                         ],
-                        "correct_answer_ids": [1, 3]
+                        "correct_answer_id": [1, 3]
                     },
                     {
                         "question_id": 2,
@@ -2897,7 +2897,7 @@
                             {"option_id": 3, "option_text": "PostgreSQL"},
                             {"option_id": 4, "option_text": "MariaDB"}
                         ],
-                        "correct_answer_ids": [1, 3]
+                        "correct_answer_id": [1, 3]
                     },
                     {
                         "question_id": 12,
@@ -2908,7 +2908,7 @@
                             {"option_id": 3, "option_text": "IOPS"},
                             {"option_id": 4, "option_text": "Read replicas"}
                         ],
-                        "correct_answer_ids": [1, 2]
+                        "correct_answer_id": [1, 2]
                     },
                     {
                         "question_id": 13,
@@ -2974,7 +2974,7 @@
                             {"option_id": 3, "option_text": "It’s backed by solid-state drives."},
                             {"option_id": 4, "option_text": "It’s a way to uniquely identify an item in a table"}
                         ],
-                        "correct_answer_ids": [2, 3]
+                        "correct_answer_id": [2, 3]
                     },
                     {
                         "question_id": 19,
@@ -3073,7 +3073,7 @@
                             {"option_id": 3, "option_text": "Amazon Aurora"},
                             {"option_id": 4, "option_text": "PostgreSQL"}
                         ],
-                        "correct_answer_ids": [3, 4]
+                        "correct_answer_id": [3, 4]
                     },
                     {
                         "question_id": 28,
@@ -3178,7 +3178,7 @@
                             {"option_id": 3, "option_text": "IAM Access Key Rotation"},
                             {"option_id": 4, "option_text": "Load Balancer Optimization"}
                         ],
-                        "correct_answer_ids": [3, 4]
+                        "correct_answer_id": [3, 4]
                     },
                     {
                         "question_id": 7,
@@ -3266,7 +3266,7 @@
                             {"option_id": 3, "option_text": "Fault Tolerance"},
                             {"option_id": 4, "option_text": "Service Limits"}
                         ],
-                        "correct_answer_ids": [2, 3]
+                        "correct_answer_id": [2, 3]
                     },
                     {
                         "question_id": 15,
@@ -3332,7 +3332,7 @@
                             {"option_id": 3, "option_text": "Improved turnaround for new application code releases"},
                             {"option_id": 4, "option_text": "Improved developer-admin communications"}
                         ],
-                        "correct_answer_ids": [1, 2]
+                        "correct_answer_id": [1, 2]
                     }
                 ]
             },
@@ -3349,7 +3349,7 @@
                             {"option_id": 3, "option_text": "It can send an SNS notification when an IAM user logs in to the AWS Management Console."},
                             {"option_id": 4, "option_text": "It can shut down an EC2 instance at a specific time."}
                         ],
-                        "correct_answer_ids": [3, 4]
+                        "correct_answer_id": [3, 4]
                     },
                     {
                         "question_id": 2,
@@ -3360,7 +3360,7 @@
                             {"option_id": 3, "option_text": "Group size"},
                             {"option_id": 4, "option_text": "Minimum"}
                         ],
-                        "correct_answer_ids": [1, 4]
+                        "correct_answer_id": [1, 4]
                     },
                     {
                         "question_id": 3,
@@ -3415,7 +3415,7 @@
                             {"option_id": 3, "option_text": "Create a trail to log S3 data events."},
                             {"option_id": 4, "option_text": "Enable CloudTrail logging of global service events."}
                         ],
-                        "correct_answer_ids": [1, 3]
+                        "correct_answer_id": [1, 3]
                     },
                     {
                         "question_id": 8,
@@ -3597,7 +3597,7 @@
                             {"option_id": 3, "option_text": "Mobile pull notification"},
                             {"option_id": 4, "option_text": "Simple Queue Service (SQS)"}
                         ],
-                        "correct_answer_ids": [1, 4]
+                        "correct_answer_id": [1, 4]
                     },
                     {
                         "question_id": 4,
@@ -3641,7 +3641,7 @@
                             {"option_id": 3, "option_text": "Launching resources in the wrong Region can have a major unintended impact on costs incurred by your account."},
                             {"option_id": 4, "option_text": "Launching resources in the wrong Region can negatively impact connectivity and access."}
                         ],
-                        "correct_answer_ids": [2, 4]
+                        "correct_answer_id": [2, 4]
                     },
                     {
                         "question_id": 8,
@@ -3697,7 +3697,7 @@
                             {"option_id": 4, "option_text": "Fortran"},
                             {"option_id": 5, "option_text": "JSON"}
                         ],
-                        "correct_answer_ids": [1, 2, 3]
+                        "correct_answer_id": [1, 2, 3]
                     },
                     {
                         "question_id": 13,
@@ -3708,7 +3708,7 @@
                             {"option_id": 3, "option_text": "Relational Database Service"},
                             {"option_id": 4, "option_text": "Elastic Beanstalk"}
                         ],
-                        "correct_answer_ids": [2, 4]
+                        "correct_answer_id": [2, 4]
                     },
                     {
                         "question_id": 14,
@@ -3863,7 +3863,7 @@
                             {"option_id": 3, "option_text": "Automated patches and backups"},
                             {"option_id": 4, "option_text": "DB owner can resize the capacity accordingly"}
                         ],
-                        "correct_answer_ids": [3, 4]
+                        "correct_answer_id": [3, 4]
                     },
                     {
                         "question_id": 28,
@@ -3963,7 +3963,7 @@
                             {"option_id": 4, "option_text": "For cross account access it is best to share the Access Keys when one Account needs to access services of another Account"},
                             {"option_id": 5, "option_text": "While creating an AWS Account, its best to create an IAM user & use that Account"}
                         ],
-                        "correct_answer_ids": [1, 5]
+                        "correct_answer_id": [1, 5]
                     },
                     {
                         "question_id": 37,
@@ -4008,7 +4008,7 @@
                             {"option_id": 4, "option_text": "Patch management within the infrastructure"},
                             {"option_id": 5, "option_text": "Security of the cloud"}
                         ],
-                        "correct_answer_ids": [4, 5]
+                        "correct_answer_id": [4, 5]
                     },
                     {
                         "question_id": 41,
@@ -4042,7 +4042,7 @@
                             {"option_id": 4, "option_text": "Identifies areas that need further inquiry"},
                             {"option_id": 5, "option_text": "Provides trends that you can use to understand your costs"}
                         ],
-                        "correct_answer_ids": [4, 5]
+                        "correct_answer_id": [4, 5]
                     },
                     {
                         "question_id": 44,
@@ -4054,7 +4054,7 @@
                             {"option_id": 4, "option_text": "Premium"},
                             {"option_id": 5, "option_text": "Developer"}
                         ],
-                        "correct_answer_ids": [1, 2]
+                        "correct_answer_id": [1, 2]
                     },
                     {
                         "question_id": 45,
@@ -4109,7 +4109,7 @@
                             {"option_id": 3, "option_text": "AWS Shield Advanced"},
                             {"option_id": 4, "option_text": "AWS RDS"}
                         ],
-                        "correct_answer_ids": [2, 3]
+                        "correct_answer_id": [2, 3]
                     },
                     {
                         "question_id": 50,
@@ -4176,7 +4176,7 @@
                             {"option_id": 4, "option_text": "Security Group and ACL (Access Control List) settings"},
                             {"option_id": 5, "option_text": "Patch management on the EC2 instance’s operating system"}
                         ],
-                        "correct_answer_ids": [3, 4, 5]
+                        "correct_answer_id": [3, 4, 5]
                     },
                     {
                         "question_id": 56,
@@ -4220,7 +4220,7 @@
                             {"option_id": 3, "option_text": "Assume everything will fail."},
                             {"option_id": 4, "option_text": "Use as many services as possible."}
                         ],
-                        "correct_answer_ids": [2, 3]
+                        "correct_answer_id": [2, 3]
                     },
                     {
                         "question_id": 60,

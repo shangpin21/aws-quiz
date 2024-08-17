@@ -173,6 +173,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function selectAnswer(e){
+        console.log("two ans:" + twoanswers);
+        console.log("three ans:" + threeanswers);
         const selectedBtn = e.target;
         const isCorrect = selectedBtn.dataset.correct;
         if(isCorrect){
@@ -187,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     
     Array.from(answerButtons.children).forEach(button => {
-
+        console.log("Selected Ans length: " + selectedAnswers.length)
         if(selectedAnswers.length == 3 && threeanswers == true && twoanswers == false){
             if(button.dataset.correct === "true" && button.dataset.selectThree === "true"){
                 button.classList.add("correct");

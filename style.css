@@ -94,7 +94,7 @@ body{
     background: #9aeabc;
 }
 .incorrect{
-    background:#ff9393 !important;
+    background:#ff9393;
 }
 .pass {
     color: green;
