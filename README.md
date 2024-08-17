@@ -7,8 +7,6 @@ Test your knowledge by simply attempting these practices from module1 to module 
 
 Comment below if any answers are inaccurate or need corrections.
 
+If you find this content helpful to you please share it with others.
 
 ![Logo](./img/awsLogo.png)
-
-
-If you find this content helpful to you please share it with others.
