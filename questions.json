@@ -1621,7 +1621,7 @@
                             {"option_id": 3, "option_text": "A network access control list operates at the subnet level."},
                             {"option_id": 4, "option_text": "A security group operates at the instance level"}
                         ],
-                        "correct_answer_id":[1,3]
+                        "correct_answer_id":[3,4]
                     },
                     {
                         "quesiton_id": 10,
